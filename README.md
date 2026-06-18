@@ -1,6 +1,6 @@
-# Early Alzheimer’s Disease Detection Using Machine Learning
+# Early Alzheimer’s Disease Detection Using Handwriting Analysis
 
-This project explores the use of machine learning models for the early classification of Alzheimer’s disease using handwriting/drawing-based clinical features.
+This project explores the use of machine learning models for the early classification of Alzheimer’s disease using handwriting and drawing-based clinical features.
 
 ## Project Overview
 
@@ -8,9 +8,23 @@ Alzheimer’s disease is a progressive neurodegenerative disorder where early de
 
 ## Dataset
 
-The dataset contains 174 observations and 452 columns, including movement, timing, pressure, speed, and pen-position related features. The target variable is `class`, representing the diagnostic category.
+This project uses the publicly available **Handwriting Data to Detect Alzheimer's Disease** dataset from Kaggle.
 
-Due to data privacy and licensing limitations, the original dataset is not included in this repository. The notebook is structured to demonstrate the modelling workflow.
+Dataset source:  
+https://www.kaggle.com/datasets/taeefnajib/handwriting-data-to-detect-alzheimers-disease
+
+The dataset is licensed under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license. Under this license, the dataset can be shared and adapted, provided that appropriate credit is given to the original source.
+
+The dataset contains handwriting and drawing-based features used for Alzheimer's disease classification.
+
+To reproduce the analysis, download the dataset from Kaggle and place the CSV file in:
+
+```text
+data/data.csv
+```
+
+Dataset attribution:  
+Taef Najib, *Handwriting Data to Detect Alzheimer's Disease*, Kaggle, CC BY 4.0.
 
 ## Methods
 
@@ -24,7 +38,7 @@ The workflow includes:
 - Hyperparameter optimisation
 - Model performance evaluation
 
-Models tested:
+## Models Tested
 
 - Random Forest
 - Gradient Boosting
@@ -32,9 +46,9 @@ Models tested:
 
 ## Results
 
-The best performing baseline model was Logistic Regression, achieving approximately 94% test accuracy on the selected split. Tree-based models also achieved approximately 89% accuracy.
+The best performing baseline model was Logistic Regression, achieving approximately 94% test accuracy on the selected train-test split. Tree-based models also achieved approximately 89% accuracy.
 
-Because the dataset is small and high-dimensional, future work should include stratified cross-validation, feature selection, and external validation.
+Because the dataset is small and high-dimensional, future work should include stratified cross-validation, feature selection, and external validation. Therefore, the results should be interpreted as an exploratory machine learning analysis rather than a clinically validated diagnostic tool.
 
 ## Tech Stack
 
@@ -48,7 +62,7 @@ Because the dataset is small and high-dimensional, future work should include st
 
 ## Future Improvements
 
-- Add cross-validation and F1-score based evaluation
+- Add stratified cross-validation and F1-score based evaluation
 - Add confusion matrix and ROC-AUC analysis
 - Apply feature selection or dimensionality reduction
 - Refactor notebook into reusable Python scripts
@@ -58,4 +72,5 @@ Because the dataset is small and high-dimensional, future work should include st
 ## Author
 
 Tuğçe Aydın  
-MSc Data & Computational Science, University College Dublin
+MSc Data & Computational Science  
+University College Dublin
